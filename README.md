@@ -1,3 +1,5 @@
+# NAME:PRADEEP V
+# REG NO:212223240119
 # JKFLIPFLOP-USING-IF-ELSE
 
 **AIM:** 
@@ -38,11 +40,52 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+Developed by:PRADEEP V
+RegisterNumber:212223240119*/
+
+```
+
+module JK_F(q,qb,j,k,clock,reset);
+input j,k,clock, reset;
+output reg q,qb;
+
+always@(posedge(clock))
+
+begin
+    if(reset)
+	   begin 
+		  q <= q;
+		  qb <= qb;
+		  end
+	else
+		  begin
+		    if(j != k)
+			 begin 
+			   q <= j;
+				qb <= k;
+				end
+			else if(j == 1 && k == 1)	
+			  begin
+			    q <= 1'bz;
+				 qb <= 1'bz;
+				end
+		 end
+	end
+endmodule
+
+
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
+![image](https://github.com/velupradeep/JKFLIPFLOP-USING-IF-ELSE/assets/150329341/71d7c7b3-d130-4c59-8ce7-29ae83ab2be8)
+
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![image](https://github.com/velupradeep/JKFLIPFLOP-USING-IF-ELSE/assets/150329341/8353b2d1-4b3a-40eb-866a-6f8bf4229c41)
+
 
 **RESULTS**
+
+Thus a program to implement a JK flipflop using verilog and validating their functionality using their functional tables is successfully completed.
