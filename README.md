@@ -60,7 +60,7 @@ RegisterNumber:212223240119*/
 
 ```
 
-module JK_F(q,qb,j,k,clock,reset);
+module jk_ff(q,qb,j,k,clock,reset);
 input j,k,clock, reset;
 output reg q,qb;
 
@@ -92,12 +92,14 @@ endmodule
 ```
 
 **RTL LOGIC FOR FLIPFLOPS**
-![image](https://github.com/velupradeep/JKFLIPFLOP-USING-IF-ELSE/assets/150329341/71d7c7b3-d130-4c59-8ce7-29ae83ab2be8)
+![322921278-cc422ce5-9284-46ce-8183-630ad3c3d8b2](https://github.com/velupradeep/JKFLIPFLOP-USING-IF-ELSE/assets/150329341/7010b1d5-8482-4e89-bc83-eeb7a264e7b1)
+
 
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-![image](https://github.com/velupradeep/JKFLIPFLOP-USING-IF-ELSE/assets/150329341/8353b2d1-4b3a-40eb-866a-6f8bf4229c41)
+
+![322921337-064da0f7-6617-44d5-b719-42135abdc582](https://github.com/velupradeep/JKFLIPFLOP-USING-IF-ELSE/assets/150329341/5ef43a42-0bb6-4358-8b3e-5987fa7ad348)
 
 
 **RESULTS**
