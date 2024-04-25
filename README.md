@@ -60,46 +60,52 @@ RegisterNumber:212223240119*/
 
 ```
 
-module jk_ff(q,qb,j,k,clock,reset);
-input j,k,clock, reset;
-output reg q,qb;
+module JKFLIPFLOP(q, qb,j,k,clock,reset);
+    input j,k,clock,reset;
+    output reg q, qb;
+	 
+always @ (posedge (clock))
 
-always@(posedge(clock))
-
-begin
-    if(reset)
-	   begin 
-		  q <= q;
-		  qb <= qb;
-		  end
-	else
-		  begin
-		    if(j != k)
-			 begin 
-			   q <= j;
-				qb <= k;
-				end
-			else if(j == 1 && k == 1)	
-			  begin
-			    q <= 1'bz;
-				 qb <= 1'bz;
-				end
-		 end
+    begin 
+        if (!reset)
+            begin
+               q <= q;
+               qb <=qb;
+            end   
+        
+else
+   begin
+	   if(j==0 && k==0)
+		   begin
+			q<=q;
+			qb<=qb;
+			end
+		else if(j!=k)
+		   begin
+			q<=j;
+			qb<=k;
+			end
+		else if(j==1 && k==1)
+		    begin
+			 q<=~q;
+			 qb<=~qb;
+			 end
 	end
+end	
 endmodule
 
 
 ```
 
 **RTL LOGIC FOR FLIPFLOPS**
-![322921278-cc422ce5-9284-46ce-8183-630ad3c3d8b2](https://github.com/velupradeep/JKFLIPFLOP-USING-IF-ELSE/assets/150329341/7010b1d5-8482-4e89-bc83-eeb7a264e7b1)
+![323293082-48cc0eb5-e90d-45bd-bb4e-000dcf05a796](https://github.com/velupradeep/JKFLIPFLOP-USING-IF-ELSE/assets/150329341/30425e99-6e9e-4142-9c6e-05338411e6cd)
 
 
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-![322921337-064da0f7-6617-44d5-b719-42135abdc582](https://github.com/velupradeep/JKFLIPFLOP-USING-IF-ELSE/assets/150329341/5ef43a42-0bb6-4358-8b3e-5987fa7ad348)
+![323293154-d4b06ea5-ea16-4979-8e0c-56e0bf0706b1](https://github.com/velupradeep/JKFLIPFLOP-USING-IF-ELSE/assets/150329341/8bec6ab3-072d-45f9-a245-d3e44dcc39db)
 
 
 **RESULTS**
