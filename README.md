@@ -1,6 +1,5 @@
-# NAME:PRADEEP V
-# REG NO:212223240119
-# EX-07 JKFLIPFLOP-USING-IF-ELSE
+
+# EX-07 JKFlipflop-Using-If-Else
 
 **AIM:** 
 
